@@ -31,7 +31,7 @@ class Item(object):
 
         pattern = re.compile("(\d+.\d+)")
         match = pattern.search(string_price)
-        self.price = float(match.group().strip(','))
+        self.price = float(match.group().replace(',',''))
 
         return self.price
 
